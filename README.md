@@ -106,6 +106,6 @@ async def online():
 ```
 
 <h1 align="center">
-now inside ready where the bot starts place add this
+thanks!!
 </h1>
 ```
