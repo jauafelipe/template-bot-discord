@@ -2,13 +2,13 @@
 
 <h1 align="center">I decided to launch this bot template for discord using Python</h1>
 
-# REQUIREMENTS
+<h1 align="center">REQUIREMENTS</h1>
 
-# discord.py | python-dotenv
+<h1 align="center">discod.py | python-dotenv</h1>
 
 <h2 align="center">Start</h2>
 
-# import
+<h3 align="center">import</h3>
 
 ```py
 import dotenv
@@ -17,17 +17,18 @@ import os
 import discord
 from discord.ext import commands
 
-# configure
 ```
 
-# Right below
+#
+
+<h3 align="center">Right below</h3>
 
 ```py
 TOKEN = os.environ.get("TOKEN") # token in .env
 client = commands.Bot(command_prefix="your prefix", intents=discord.Intents.all())
 ```
 
-# Intents can be configured manually too
+<h3 align="center">Intents can be configured manually too</h3>
 
 ```py
 intents = discord.Intents.default()
@@ -35,7 +36,8 @@ intents.dm_messages = True
 client = commands.Bot(command_prefix="your prefix", intents=intents)
 ```
 
-# let's get it all up and put the bot to work, using an event decorator
+<h3 align="center">let's get it all up and put the bot to work, using an event decorator
+</h3>
 
 ```py
 TOKEN = os.environ.get("TOKEN") # token in .env
@@ -56,9 +58,10 @@ async def send_mesage(message:discord.Message):
 client.run(TOKEN)
 ```
 
-# simple? yes?, Now let's register your commands.cog
-
-# create a commands folder, inside it put basicStart.py
+<h3 align="center">
+simple? yes?, Now let's register your commands.cog
+create a commands folder, inside it put basicStart.py
+</h3>
 
 ```py
 # I recommend using class
@@ -78,14 +81,20 @@ class CommandsBasic(commands.Cog):
         await ctx.send("My primary command")
 ```
 
-# ok, let's register your command.Cog, returning to main.py
+<h3 align="center">
+ok, let's register your command.Cog, returning to main.py
+
+</h3>
 
 ```py
 # import commands in main.py
 from commands.basicStart import CommandsBasic
 ```
 
-# now inside ready where the bot starts place add this
+<h3 align="center">
+now inside ready where the bot starts place add this
+
+</h3>
 
 ```py
 @client.event
@@ -96,4 +105,7 @@ async def online():
 
 ```
 
-# Now your bot is ready to be used
+<h1 align="center">
+now inside ready where the bot starts place add this
+</h1>
+```
